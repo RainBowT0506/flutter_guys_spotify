@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_guys_spotify/common/widgets/button/basic_app_button.dart';
 import 'package:flutter_guys_spotify/core/assets/app_vectors.dart';
+import 'package:flutter_guys_spotify/presentation/choose_mode/pages/choose_mode.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../core/assets/app_images.dart';
 
@@ -20,7 +21,18 @@ class GetStaredPage extends StatelessWidget {
                     fit: BoxFit.fill,
                     image: AssetImage(
                       AppImages.introBG,
-                    ))),
+                    )
+                )
+            ),
+          ),
+          Container(
+            color: Colors.black.withOpacity(0.15),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: 40,
+              horizontal: 40
+            ),
             child: Column(
               children: [
                 Align(
@@ -48,15 +60,18 @@ class GetStaredPage extends StatelessWidget {
                   height: 20,
                 ),
                 BasicAppButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                            const ChooseModePage()));
+                  },
                   title: 'Get Started',
                 )
               ],
             ),
           ),
-          Container(
-            color: Colors.black.withOpacity(0.15),
-          )
         ],
       ),
     );
