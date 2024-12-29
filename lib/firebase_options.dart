@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,15 +25,9 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -49,20 +40,47 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyDwxQPdGbSiD5dcVGh88R23lGMImKCxtKs',
+    appId: '1:426509858399:web:4b4738cef4e35016264dea',
+    messagingSenderId: '426509858399',
+    projectId: 'spotify0101',
+    authDomain: 'spotify0101.firebaseapp.com',
+    storageBucket: 'spotify0101.appspot.com',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAOeSqQcMns9sD_UbcjR9NYu2faYPupVk0',
-    appId: '1:358896866740:android:152e760ed39e23bc548ee1',
-    messagingSenderId: '358896866740',
-    projectId: 'flutter-guys-spotify-7ab01',
-    storageBucket: 'flutter-guys-spotify-7ab01.firebasestorage.app',
+    apiKey: 'AIzaSyAwAF_v-n8bHO0Nrf_x0VvqALRxIN436OM',
+    appId: '1:426509858399:android:a9f0dd91f4d88cb2264dea',
+    messagingSenderId: '426509858399',
+    projectId: 'spotify0101',
+    storageBucket: 'spotify0101.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAWMJ4pY8JW0Z4JsIq2nLwHKbeULxpyAGU',
-    appId: '1:358896866740:ios:963795dcf39fe964548ee1',
-    messagingSenderId: '358896866740',
-    projectId: 'flutter-guys-spotify-7ab01',
-    storageBucket: 'flutter-guys-spotify-7ab01.firebasestorage.app',
-    iosBundleId: 'com.rainbowt0506.flutterGuysSpotify',
+    apiKey: 'AIzaSyBumD8nn8O9ISMsaxhBT-duBGi1YSZAsSk',
+    appId: '1:426509858399:ios:78d9d14dc192a583264dea',
+    messagingSenderId: '426509858399',
+    projectId: 'spotify0101',
+    storageBucket: 'spotify0101.appspot.com',
+    iosBundleId: 'com.example.spotify',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyBumD8nn8O9ISMsaxhBT-duBGi1YSZAsSk',
+    appId: '1:426509858399:ios:78d9d14dc192a583264dea',
+    messagingSenderId: '426509858399',
+    projectId: 'spotify0101',
+    storageBucket: 'spotify0101.appspot.com',
+    iosBundleId: 'com.example.spotify',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyDwxQPdGbSiD5dcVGh88R23lGMImKCxtKs',
+    appId: '1:426509858399:web:7367e344006c4003264dea',
+    messagingSenderId: '426509858399',
+    projectId: 'spotify0101',
+    authDomain: 'spotify0101.firebaseapp.com',
+    storageBucket: 'spotify0101.appspot.com',
   );
 }

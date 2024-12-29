@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "358896866740",
-    "project_id": "flutter-guys-spotify-7ab01",
-    "storage_bucket": "flutter-guys-spotify-7ab01.firebasestorage.app"
+    "project_number": "426509858399",
+    "project_id": "spotify0101",
+    "storage_bucket": "spotify0101.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:358896866740:android:152e760ed39e23bc548ee1",
+        "mobilesdk_app_id": "1:426509858399:android:a9f0dd91f4d88cb2264dea",
         "android_client_info": {
           "package_name": "com.rainbowt0506.flutter_guys_spotify"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAOeSqQcMns9sD_UbcjR9NYu2faYPupVk0"
+          "current_key": "AIzaSyAwAF_v-n8bHO0Nrf_x0VvqALRxIN436OM"
         }
       ],
       "services": {
