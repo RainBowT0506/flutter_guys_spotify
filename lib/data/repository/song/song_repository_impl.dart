@@ -11,4 +11,10 @@ class SongRepositoryImpl extends SongsRepository{
     return await sl<SongFirebaseService>().getNewsSongs();
   }
 
+  @override
+  Future<Either> getPlayList() async{
+    // TODO: implement getPlayList
+    return await sl<SongFirebaseService>().getPlayList();
+  }
+
 }

@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_guys_spotify/domain/usecases/song/get_news_songs.dart';
-import 'package:flutter_guys_spotify/presentation/home/bloc/new_song_state.dart';
+import 'package:flutter_guys_spotify/presentation/home/bloc/news_song_state.dart';
 
 import '../../../service_locator.dart';
 
@@ -12,7 +12,7 @@ class NewsSongsCubit extends Cubit<NewsSongsState> {
     returnedSongs.fold((l) {
       emit(NewsSongsLoadFailure());
     }, (data) {
-      emit(NewsSongLoaded(songs: data));
+      emit(NewsSongsLoaded(songs: data));
     });
   }
 }

@@ -4,10 +4,10 @@ abstract class NewsSongsState {}
 
 class NewsSongsLoading extends NewsSongsState {}
 
-class NewsSongLoaded extends NewsSongsState {
+class NewsSongsLoaded extends NewsSongsState {
   final List<SongEntity> songs;
 
-  NewsSongLoaded({required this.songs});
+  NewsSongsLoaded({required this.songs});
 }
 
 class NewsSongsLoadFailure extends NewsSongsState {}

@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_guys_spotify/common/helpers/is_dark.mode.dart';
 import 'package:flutter_guys_spotify/core/configs/constants/app_urls.dart';
 import 'package:flutter_guys_spotify/core/configs/theme/app_colors.dart';
-import 'package:flutter_guys_spotify/presentation/home/bloc/new_song_state.dart';
+import 'package:flutter_guys_spotify/presentation/home/bloc/news_song_state.dart';
 import 'package:flutter_guys_spotify/presentation/home/bloc/news_song_cubit.dart';
 
 import '../../../domain/entities/song/song.dart';
@@ -24,7 +24,7 @@ class NewsSongs extends StatelessWidget {
             );
           }
 
-          if (state is NewsSongLoaded) {
+          if (state is NewsSongsLoaded) {
             return _songs(state.songs);
           }
 

@@ -7,6 +7,7 @@ import 'package:flutter_guys_spotify/domain/repository/song/song.dart';
 import 'package:flutter_guys_spotify/domain/usecases/auth/signin.dart';
 import 'package:flutter_guys_spotify/domain/usecases/auth/signup.dart';
 import 'package:flutter_guys_spotify/domain/usecases/song/get_news_songs.dart';
+import 'package:flutter_guys_spotify/domain/usecases/song/get_play_list.dart';
 import 'package:get_it/get_it.dart';
 
 final sl = GetIt.instance;
@@ -25,4 +26,5 @@ Future<void> initDependencies() async {
   sl.registerSingleton<SigninUseCase>(SigninUseCase());
 
   sl.registerSingleton<GetNewsSongsUseCase>(GetNewsSongsUseCase());
+  sl.registerSingleton<GetPlayListUseCase>(GetPlayListUseCase());
 }
