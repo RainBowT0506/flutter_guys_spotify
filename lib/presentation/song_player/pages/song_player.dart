@@ -5,6 +5,7 @@ import 'package:flutter_guys_spotify/domain/entities/song/song.dart';
 import 'package:flutter_guys_spotify/presentation/song_player/bloc/song_player_cubit.dart';
 import 'package:flutter_guys_spotify/presentation/song_player/bloc/song_player_state.dart';
 
+import '../../../common/widgets/favorite_button/favorite_button.dart';
 import '../../../core/configs/constants/app_urls.dart';
 import '../../../core/configs/theme/app_colors.dart';
 
@@ -81,13 +82,7 @@ class SongPlayerPage extends StatelessWidget {
             )
           ],
         ),
-        IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.favorite_outline_outlined,
-              size: 35,
-              color: AppColors.darkGrey,
-            ))
+        FavoriteButton(songEntity: songEntity)
       ],
     );
   }
@@ -131,7 +126,7 @@ class SongPlayerPage extends StatelessWidget {
                 height: 20,
               ),
               GestureDetector(
-                onTap: (){
+                onTap: () {
                   context.read<SongPlayerCubit>().playOrPauseSong();
                 },
                 child: Container(
@@ -139,9 +134,10 @@ class SongPlayerPage extends StatelessWidget {
                   width: 60,
                   decoration: const BoxDecoration(
                       shape: BoxShape.circle, color: AppColors.primary),
-                  child: Icon(context.read<SongPlayerCubit>().audioPlayer.playing
-                      ? Icons.pause
-                      : Icons.play_arrow),
+                  child: Icon(
+                      context.read<SongPlayerCubit>().audioPlayer.playing
+                          ? Icons.pause
+                          : Icons.play_arrow),
                 ),
               )
             ],
